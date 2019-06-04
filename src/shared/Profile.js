@@ -26,11 +26,11 @@ class Profile extends Component {
             `;
         }
 
-        //const profilePic = user.photoURL || '../../assets/profile-placeholder.png';
+        const profilePic = user.photoURL || '../../assets/profile-placeholder.png';
 
         return /*html*/ `
             <div class="profile">
-                <img src="${user.photoURL}" alt="Profile pic">
+                <img src="${profilePic}" alt="Profile pic">
                 <p>Pavel Kudlanov</p>
                 <button>Sign Out</button>
             </div>

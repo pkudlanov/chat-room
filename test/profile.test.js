@@ -33,7 +33,7 @@ test('Default picture with no URL', assert => {
 
     const expected = /*html*/ `
         <div class="profile">
-            <img src="../../profile-placeholder.png" alt="Profile pic">
+            <img src="../../assets/profile-placeholder.png" alt="Profile pic">
             <p>Pavel Kudlanov</p>
             <button>Sign Out</button>
         </div>
