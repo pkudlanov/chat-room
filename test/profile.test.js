@@ -24,3 +24,24 @@ test('Renders profile from template', assert => {
 
     assert.equal(rendered, expected);
 });
+
+test('Default picture with no URL', assert => {
+    const user = {
+        displayName: 'Pavel Kudlanov',
+        photoURL: null
+    };
+
+    const expected = /*html*/ `
+        <div class="profile">
+            <img src="../../profile-placeholder.png" alt="Profile pic">
+            <p>Pavel Kudlanov</p>
+            <button>Sign Out</button>
+        </div>
+    `;
+
+    const profile = new Profile({ user });
+
+    const rendered = profile.renderTemplate();
+
+    assert.equal(rendered, expected);
+});

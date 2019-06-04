@@ -30,7 +30,7 @@ class Profile extends Component {
 
         return /*html*/ `
             <div class="profile">
-                <img src="../../assets/profile.jpg" alt="Profile pic">
+                <img src="${user.photoURL}" alt="Profile pic">
                 <p>Pavel Kudlanov</p>
                 <button>Sign Out</button>
             </div>
