@@ -45,3 +45,17 @@ test('Default picture with no URL', assert => {
 
     assert.equal(rendered, expected);
 });
+
+test('Renders profile with just an empty div', assert => {
+    const user = null;
+
+    const expected = /*html*/ `
+        <div></div>
+    `;
+
+    const profile = new Profile({ user });
+
+    const rendered = profile.renderTemplate();
+
+    assert.equal(rendered, expected);
+});
