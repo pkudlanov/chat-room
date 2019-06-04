@@ -29,7 +29,7 @@ class AuthApp extends Component {
             <div>
                 <main>
                     <p>Please Sign In</p>
-                    <div id="firebase-auth-container"></div>
+                    <div id="firebaseui-auth-container"></div>
                 </main>
             </div>
         `;
