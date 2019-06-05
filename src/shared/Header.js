@@ -21,7 +21,7 @@ class Header extends Component {
         const title = this.props.title || document.title;
         return /*html*/ `
             <header>
-                <h1>${title}</h1>
+                <h1 class="title">${title}</h1>
             </header>
         `;
     }
