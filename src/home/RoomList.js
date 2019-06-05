@@ -4,8 +4,7 @@ class RoomList extends Component {
     renderTemplate() {
         return /*html*/ `
             <ul>
-                <a><li>World Wonders</li></a>
-                <a><li>Human Built Wonders</li></a>
+                <a href="./chat.html?key=klsa32dsnk328y"><li>World Wonders</li></a>
             </ul>
         `;
     }
