@@ -11,3 +11,5 @@ const config = {
 firebase.initializeApp(config);
 
 export const auth = firebase.auth();
+
+export const chatRoomsDB = firebase.database().ref('chatRooms');
