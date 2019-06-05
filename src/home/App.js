@@ -1,6 +1,7 @@
 import Component from '../Component.js';
 import Header from '../shared/Header.js';
 import AddRoom from './AddRoom.js';
+import RoomList from './RoomList.js';
 
 class App extends Component {
     render(){
@@ -12,6 +13,9 @@ class App extends Component {
 
         const addRoom = new AddRoom();
         main.appendChild(addRoom.render());
+
+        const roomList = new RoomList();
+        main.appendChild(roomList.render());
 
         return dom;
     }

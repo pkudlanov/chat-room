@@ -7,9 +7,9 @@ class AddRoom extends Component {
         const input = form.querySelector('input');
 
         
-        console.log(input.value, 'input');
         
         form.addEventListener('submit', () => {
+            console.log(input.value, 'input');
             const roomRef = chatRoomsDB.push();
             const room = {
                 key: roomRef.key,
@@ -21,7 +21,6 @@ class AddRoom extends Component {
             roomRef.set(room).then(() => {
                 form.reset();
             });
-
         });
 
         return form;
