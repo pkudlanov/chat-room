@@ -22,7 +22,7 @@ test('Renders profile from template', assert => {
 
     const rendered = profile.renderTemplate();
 
-    assert.equal(rendered, expected);
+    assert.htmlEqual(rendered, expected);
 });
 
 test('Default picture with no URL', assert => {
@@ -43,7 +43,7 @@ test('Default picture with no URL', assert => {
 
     const rendered = profile.renderTemplate();
 
-    assert.equal(rendered, expected);
+    assert.htmlEqual(rendered, expected);
 });
 
 test('Renders profile with just an empty div', assert => {
@@ -57,5 +57,5 @@ test('Renders profile with just an empty div', assert => {
 
     const rendered = profile.renderTemplate();
 
-    assert.equal(rendered, expected);
+    assert.htmlEqual(rendered, expected);
 });

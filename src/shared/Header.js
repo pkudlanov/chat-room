@@ -1,14 +1,18 @@
 import Component from '../Component.js';
+import Profile from './Profile.js';
 import { auth } from '../services/firebase.js';
 
 class Header extends Component {
     render(){
         const dom = this.renderDOM();
 
+        const user = null;
+
+        const profile = new Profile({ user });
+        dom.appendChild(profile.render());
+
         auth.onAuthStateChanged(user => {
-            if(user){
-                console.log(user);
-            }
+            profile.update({ user });
         });
 
         return dom;
