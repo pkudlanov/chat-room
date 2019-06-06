@@ -14,7 +14,7 @@ class App extends Component {
         const addRoom = new AddRoom();
         main.appendChild(addRoom.render());
 
-        const roomList = new RoomList();
+        const roomList = new RoomList({ chatRooms: [] });
         main.appendChild(roomList.render());
 
         return dom;
