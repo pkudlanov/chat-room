@@ -1,17 +1,20 @@
 import Component from '../Component.js';
+import RemoveRoom from './RemoveRoom.js';
 import { chatRoomsDB } from '../services/firebase.js';
 
 class RoomListItem extends Component {
     render() {
         const dom = this.renderDOM();
         const chatRoomObj = this.props.chatRoom;
-
         const chat = chatRoomsDB.child(chatRoomObj.key);
 
-        const button = dom.querySelector('button');
-        button.addEventListener('click', () => {
-            chat.remove();
+        const removeButton = new RemoveRoom({
+            removeRoom: () => {
+                chat.remove();
+            } 
         });
+
+        dom.appendChild(removeButton.render());
 
         return dom;
     }
@@ -25,7 +28,6 @@ class RoomListItem extends Component {
                 <a href="./chat.html?key=${key}">
                     <li>${name}</li>
                 </a>
-                <button>Remove List</button>
             </div>
         `;
     }
