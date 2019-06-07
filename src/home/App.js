@@ -2,6 +2,7 @@ import Component from '../Component.js';
 import Header from '../shared/Header.js';
 import AddRoom from './AddRoom.js';
 import RoomList from './RoomList.js';
+import { chatRoomsDB } from '../services/firebase.js';
 
 class App extends Component {
     render(){
@@ -16,6 +17,13 @@ class App extends Component {
 
         const roomList = new RoomList({ chatRooms: [] });
         main.appendChild(roomList.render());
+
+        chatRoomsDB.on('value', snapshot => {
+            const value = snapshot.val();
+            const chatRooms = value ? Object.values(value) : [];
+            roomList.update({ chatRooms });
+        });
+
 
         return dom;
     }

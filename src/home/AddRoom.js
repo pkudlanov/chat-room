@@ -5,11 +5,8 @@ class AddRoom extends Component {
     render() {
         const form = this.renderDOM();
         const input = form.querySelector('input');
-
-        
         
         form.addEventListener('submit', () => {
-            console.log(input.value, 'input');
             const roomRef = chatRoomsDB.push();
             const room = {
                 key: roomRef.key,

@@ -5,14 +5,7 @@ class RoomList extends Component {
     render() {
         const dom = this.renderDOM();
 
-        const chatRooms = this.props.chatRoomsArr;
-        //const chatRoomsArr = Object.values(chatRoomsObj);
-
-        console.log(chatRooms, 'chatRoooooommmmlsjsljskl');
-
-        // if(!chatRoomsArr[0]){
-        //     return dom;
-        // }
+        const chatRooms = this.props.chatRooms;
 
         chatRooms.forEach(chatRoom => {
             const chatRoomItem = new RoomListItem({ chatRoom });
