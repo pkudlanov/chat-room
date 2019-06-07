@@ -1,0 +1,22 @@
+.profile img{
+    width: 72px;
+    border-radius: 10%;
+}
+
+.profile p{
+    padding: 20px;
+    font-size: 1.8em;
+    width: 34%;
+}
+
+.profile button{
+    width: 72px;
+    height: 72px;
+    border-radius: 10%;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
