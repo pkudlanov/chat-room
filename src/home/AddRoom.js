@@ -27,7 +27,7 @@ class AddRoom extends Component {
         return /*html*/ `
             <form id="chat-form">
                 <label for="name-input">Chatroom Name</label>
-                <input name="name-input" type="text" placeholder="Name">
+                <input name="name-input" type="text" placeholder="Name" required>
                 <button>Make Room</button>
             </form>
         `;

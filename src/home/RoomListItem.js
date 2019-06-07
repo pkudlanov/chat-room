@@ -1,20 +1,29 @@
 import Component from '../Component.js';
 import RemoveRoom from './RemoveRoom.js';
-import { chatRoomsDB } from '../services/firebase.js';
+import { chatRoomsDB, auth } from '../services/firebase.js';
 
 class RoomListItem extends Component {
     render() {
         const dom = this.renderDOM();
         const chatRoomObj = this.props.chatRoom;
         const chat = chatRoomsDB.child(chatRoomObj.key);
-
+        const currentUser = auth.currentUser.uid;
+        const chatCreator = chatRoomObj.owner;
+        
+        console.log(currentUser, 'user');
+        console.log(chatCreator, 'creator');
+        
         const removeButton = new RemoveRoom({
             removeRoom: () => {
                 chat.remove();
             } 
         });
+        
+        if(currentUser === chatCreator) {
+            dom.appendChild(removeButton.render());
+        }
 
-        dom.appendChild(removeButton.render());
+
 
         return dom;
     }
