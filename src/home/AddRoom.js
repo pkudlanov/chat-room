@@ -22,7 +22,6 @@ class AddRoom extends Component {
 
         return form;
     }
-
     renderTemplate() {
         return /*html*/ `
             <form id="chat-form">

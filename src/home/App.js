@@ -24,7 +24,6 @@ class App extends Component {
             roomList.update({ chatRooms });
         });
 
-
         return dom;
     }
     renderTemplate() {

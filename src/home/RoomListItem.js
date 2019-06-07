@@ -10,20 +10,15 @@ class RoomListItem extends Component {
         const currentUser = auth.currentUser.uid;
         const chatCreator = chatRoomObj.owner;
         
-        console.log(currentUser, 'user');
-        console.log(chatCreator, 'creator');
-        
         const removeButton = new RemoveRoom({
             removeRoom: () => {
                 chat.remove();
             } 
         });
-        
+
         if(currentUser === chatCreator) {
             dom.appendChild(removeButton.render());
         }
-
-
 
         return dom;
     }
