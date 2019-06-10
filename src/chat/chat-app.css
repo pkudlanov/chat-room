@@ -1,0 +1,42 @@
+body {
+    background-color: rgb(255, 233, 209);
+}
+
+ol {
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    display: inline-block;
+    margin: 6px;
+    width: 80%;
+    background-color: rgb(255, 212, 155);
+    border: solid;
+    border-color: rgb(255, 157, 0);
+    border-width: 3px;
+    border-radius: 20px;
+}
+
+img {
+    margin: 8px;
+}
+
+span {
+    float: right;
+    width: 120px;
+    margin-right: 2%;
+    text-align: right;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 2%;
+}
+
+.message {
+    width: 80%;
+    background-color: rgb(255, 212, 155);
+    font-size: 1.4em;
+    margin: 20px;
+}
