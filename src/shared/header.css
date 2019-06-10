@@ -1,0 +1,9 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(0, 0, 0);
+}
+
+.title{
+    font-size: 3.6em;
+}
